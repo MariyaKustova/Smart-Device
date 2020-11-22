@@ -1,0 +1,195 @@
+.benefits-section {
+  background-image: url("../img/background-2.png");
+  background-color: $dark-active;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 92px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-2@2x.png");
+  }
+}
+
+.benefits-section__wrapper {
+  @include alignment-desktop();
+  padding-top: 110px;
+}
+
+.benefits-section__title {
+  @include title();
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+.benefits-section__list {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits-section__item {
+  background-color: $light;
+  padding: 30px 30px 10px 30px;
+  width: calc((100% - 80px) / 3);
+  box-sizing: border-box;
+  margin-right: 39px;
+  margin-bottom: 28px;
+
+  h3 {
+    @include font(18px, 27px);
+    font-weight: 500;
+    color: $dark;
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+
+  p {
+    @include font(14px, 20px);
+    font-weight: 400;
+    color: $dark;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.benefits-section__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.benefits-section__svg--boat {
+  @include size(27px, 32px);
+  fill: $dark;
+  margin-bottom: 15px;
+}
+
+.benefits-section__svg--checks {
+  @include size(38px, 21px);
+  position: relative;
+  top: 5px;
+  margin-bottom: 26px;
+}
+
+.benefits-section__svg--ship {
+  @include size(42px, 15px);
+  position: relative;
+  top: 8px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .benefits-section {
+    background-image: url("../img/background-tablet-2.png");
+    padding-bottom: 71px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-tablet-2@2x.png");
+    }
+  }
+
+  .benefits-section__wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 90px;
+  }
+
+  .benefits-section__title {
+    @include font(26px, 39px);
+    text-align: center;
+    margin-bottom: 49px;
+  }
+
+  .benefits-section__item {
+    padding: 25px 17px 6px 20px;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+
+    h3 {
+      @include font(18px, 25px);
+      margin-bottom: 9px;
+    }
+  }
+
+  .benefits-section__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .benefits-section__svg--boat {
+    @include size(21px, 26px);
+    margin-bottom: 15px;
+  }
+
+  .benefits-section__svg--checks {
+    @include size(33px, 19px);
+    position: relative;
+    top: 5px;
+    margin-bottom: 23px;
+  }
+
+  .benefits-section__svg--ship {
+    @include size(38px, 13px);
+    position: relative;
+    top: 8px;
+    margin-bottom: 29px;
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .benefits-section {
+    background-image: url("../img/background-mobile-2.png");
+    padding-bottom: 35px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-mobile-2@2x.png");
+    }
+  }
+
+  .benefits-section__wrapper {
+    @include alignment-mobile();
+    padding-top: 58px;
+  }
+
+  .benefits-section__title {
+    @include font(24px, 36px);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .benefits-section__list {
+    flex-direction: column;
+  }
+
+  .benefits-section__item {
+    width: auto;
+    padding: 25px 17px 5px 20px;
+    margin-right: 0;
+    margin-bottom: 29px;
+
+    h3 {
+      @include font(18px, 25px);
+      margin-bottom: 9px;
+      box-sizing: border-box;
+      padding-right: 50px;
+    }
+  }
+
+  .benefits-section__svg--boat {
+    @include size(21px, 26px);
+    fill: $dark;
+    margin-bottom: 15px;
+  }
+
+  .benefits-section__svg--checks {
+    @include size(33px, 19px);
+    position: relative;
+    top: 5px;
+    margin-bottom: 26px;
+  }
+
+  .benefits-section__svg--ship {
+    @include size(38px, 13px);
+    position: relative;
+    top: 8px;
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,56 @@
+@mixin font($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link-reset($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin size($widht, $height) {
+  width: $widht;
+  height: $height;
+}
+
+@mixin title() {
+  @include font(28px, 42px);
+  font-weight: 600;
+  color: $dark;
+  margin-top: 0;
+}
+
+@mixin title-tablet() {
+  @include font(26px, 36px);
+}
+
+@mixin title-mobile() {
+  @include font(24px, 34px);
+}
+
+@mixin title-form() {
+  @include font(40px, 60px);
+  font-weight: 700;
+  color: $dark;
+  margin-top: 0;
+}
+
+@mixin alignment-desktop() {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 103px;
+  padding-right: 103px;
+}
+
+@mixin alignment-mobile() {
+  min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
