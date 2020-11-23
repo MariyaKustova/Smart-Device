@@ -21,41 +21,60 @@
       <a class="page-header__link-logo">
         <img class="page-header__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
         <div class="page-header__wrapper-text">
-          <img class="page-header__logo-text" src="./img/smart-device-logo.svg" width="134" height="30"
+          <img class="page-header__logo-title" src="./img/smart-device-logo.svg" width="134" height="30"
             alt="Smart Device">
-          <img class="page-header__logo-text" src="./img/text-logo.svg" width="106" height="15" alt="Умные технологии">
+          <img class="page-header__logo-text" src="./img/text-logo.svg" width="90" height="15" alt="Умные технологии">
         </div>
       </a>
       <nav class="page-header__nav main-menu">
-        <ul class="main-menu__list page-header__list">
-          <li class="main-menu__list-item page-header__list-item">
-            <a class="main-menu__link page-header__link" href="mailto:info@sd.ru">
-              <svg class="main-menu__svg" width="15px" height="10px">
+        <ul class="main-menu__list">
+          <li class="main-menu__list-item">
+            <a class="main-menu__link" href="mailto:info@sd.ru">
+              <svg class="main-menu__svg main-menu__svg--mail" width="20px" height="18px">
                 <use xlink:href="./img/sprite.svg#mail-icon"></use>
               </svg>
               <span>info@sd.ru</span>
             </a>
           </li>
-          <li class="main-menu__list-item page-header__list-item">
+          <li class="main-menu__list-item">
             <a class="main-menu__link" href="tel:+74950005252">
-              <svg class="main-menu__svg" width="17px" height="17px">
+              <svg class="main-menu__svg main-menu__svg--phone" width="19px" height="19px">
                 <use xlink:href="./img/sprite.svg#phone-icon"></use>
               </svg>
               <span>+7 (495) 000 52 52</span>
             </a>
           </li>
-          <li class="main-menu__list-item page-header__list-item">
-            <button class="main-menu__button button" type="button">Заказать звонок</button>
-          </li>
         </ul>
+        <button class="main-menu__button button" type="button">Заказать звонок</button>
       </nav>
     </div>
-    <h1 class="page-header__heading">Печатные платы</h1>
-    <p class="page-header__text">
-      производство и монтаж, поставка комплектующих, блоков и модулей
-    </p>
-    <a class="page-header__button" id="#page-footer">Получить бесплатную консультацию</a>
-    <a class="page-header__link" href="#benefits">Скролл вниз</a>
+    <div class="page-header__wrapper-content">
+      <div class="page-header__wrapper-info">
+        <h1 class="page-header__heading">Печатные платы</h1>
+        <p class="page-header__text">
+          производство и монтаж, поставка комплектующих, блоков и модулей
+        </p>
+        <a class="page-header__button" href="#page-footer">Получить бесплатную консультацию</a>
+        <a class="page-header__link" href="#benefits">Скролл вниз</a>
+      </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="
+        ./img/webp/electronic-board@1x.webp 1x,
+        ./img/webp/electronic-board@2x.webp 2x
+      " />
+        <source type="image/webp" media="(min-width: 768px)" srcset="
+        ./img/webp/electronic-board-tablet@1x.webp 1x,
+        ./img/webp/electronic-board-tablet@1x.webp 2x
+      " />
+        <source type="image/webp" media="(min-width: 320px)" srcset="
+        ./img/webp/electronic-board-mobile@1x.webp 1x,
+        ./img/webp/electronic-board-mobile@1x.webp 2x
+      " />
+        <!-- 1x: 705px*515px, 2x: 1410px*1030px -->
+        <img class="page-header__img-product" src="./img/electronic-board@1x.png" srcset="./img/electronic-board@2x.png 2x"
+          width="705" height="515" alt="Фото печатной платы" />
+      </picture>
+    </div>
   </header>
   <main class="page-main">
     <div class="page-main__wrapper">
@@ -166,8 +185,7 @@
                 ./img/webp/product-2-mobile@1x.webp 1x,
                 ./img/webp/product-2-mobile@1x.webp 2x
               " />
-              <!-- Размер без ретины - 370 * 620
-            Размер с ретиной - 740 * 1240 -->
+              <!-- 1х: 370px * 620px; 2x: 740px * 1240px -->
               <img class="products__img" src="./img/product-2-desktop@1x.png" srcset="./img/product-2-desktop@2x.png 2x"
                 width="560" height="301" alt="Фотография  пингвинов" />
             </picture>
@@ -192,8 +210,7 @@
                 ./img/webp/product-3-mobile@1x.webp 1x,
                 ./img/webp/product-3-mobile@1x.webp 2x
               " />
-              <!-- Размер без ретины - 370 * 620
-            Размер с ретиной - 740 * 1240 -->
+              <!-- 1х: 370px * 620px; 2x: 740px * 1240px -->
               <img class="products__img" src="./img/product-3-desktop@1x.png" srcset="./img/product-3-desktop@2x.png 2x"
                 width="560" height="301" alt="Фотография  пингвинов" />
             </picture>
@@ -209,15 +226,14 @@
     </section>
     <section class="page-main__form form">
       <div class="form__wrapper">
-        <!-- Размер без ретины - 511 * 288
-        Размер с ретиной - 1022 * 576 -->
+        <!-- 1х: 370px * 620px; 2x: 740px * 1240px -->
         <img class="form__img" src="./img/paper_airplane@1x.png" srcset="./img/paper_airplane@2x.png 2x" width="560"
           height="301" alt="Фотография  пингвинов" />
         <div class="form__wrapper-content">
           <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
           <p class="form__text">Мы проконсультируем Вас бесплатно</p>
           <form method="POST" action="https://echo.htmlacademy.ru">
-            <div>
+            <div class="form__wrapper-input">
               <label>
                 <input type="text" name="name" required placeholder="Имя">
               </label>
@@ -228,7 +244,7 @@
             <label>
               <textarea name="question" required>Ваш вопрос</textarea>
             </label>
-            <div>
+            <div class="form__wrapper-control">
               <button type="submit">Задать вопрос</button>
               <label>
                 <input class="visually-hidden" type="checkbox" name="consent" required>
@@ -365,6 +381,32 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup">
+    <h2 class="popup__title">Закажите звонок</h2>
+    <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form method="POST" action="https://echo.htmlacademy.ru">
+      <label>
+        <input type="text" name="name" required placeholder="Имя">
+      </label>
+      <label>
+        <input type="tel" name="phone" pattern="+[0-9]{11}" required placeholder="Телефон">
+      </label>
+      <label>
+        <textarea name="question" required>Ваш вопрос</textarea>
+      </label>
+      <button type="submit">Отправить</button>
+      <label>
+        <input class="visually-hidden" type="checkbox" name="consent" required>
+        <span>
+          <svg width="18px" height="10px">
+            <use xlink:href="./img/sprite.svg#check-mark-icon"></use>
+          </svg>
+        </span>
+        <span>Я согласен на обработку моих&nbsp;персональных данных</span>
+      </label>
+    </form>
+  </div>
 
   <script src="./js/main.js"></script>
   <script src="./js/vendor.min.js" async></script>

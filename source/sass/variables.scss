@@ -9,10 +9,15 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // Базовые цвета
+$white: #ffffff;
+$white-hover: rgba(255, 255, 255, 0.7);
+$white-active: rgba(255, 255, 255, 0.5);
 $grey: #788891;
 $background-img: #C4C4C4;
 $blue: #00B2FF;
+$blue-hover: rgba(0, 178, 255, 0.5);
+$blue-active: rgba(0, 178, 255, 0.7);
 $color-font: #666666;
-$dark-gray: #1B2D37;
+$dark-grey: #1B2D37;
 $color-border: #EBEBEB;
 $background-footer: #FAFAFA;
