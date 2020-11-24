@@ -37,6 +37,10 @@
     color: $blue-active;
     outline: 1px solid $blue;
   }
+
+  &:active .main-menu__svg {
+    stroke: $blue-active;
+  }
 }
 
 .main-menu__svg {
@@ -68,7 +72,6 @@
   cursor: pointer;
   min-width: 181px;
   padding: 13px 27px;
-  margin-top: 3px;
   margin-left: 49px;
 
   &:hover {

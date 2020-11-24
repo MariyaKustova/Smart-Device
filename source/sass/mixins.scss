@@ -42,14 +42,9 @@
 }
 
 @mixin alignment-desktop() {
-  max-width: 1920px;
+  max-width: 1461px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-left: 248px;
-  padding-right: 258px;
-}
-
-@mixin alignment-tablet() {
   padding-left: 25px;
   padding-right: 25px;
 }

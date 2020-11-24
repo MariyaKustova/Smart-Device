@@ -1,0 +1,142 @@
+.page-footer {
+  background-color: $background-footer;
+}
+
+.page-footer__wrapper-content {
+  border-bottom: 1px solid $color-border-footer;
+  padding-bottom: 58px;
+}
+
+.page-footer__alignment {
+  padding-top: 50px;
+  max-width: 1461px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.page-footer__wrapper {
+  display: flex;
+}
+
+.page-footer__wrapper-info {
+  display: flex;
+  flex-grow: 1;
+}
+
+.page-footer__link-logo {
+  margin-bottom: 54px;
+  margin-left: 23px;
+}
+
+.page-footer__img {
+    @include size(52px, 52px);
+}
+
+.page-footer__wrapper-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.page-footer__logo-title {
+  width: 146px;
+}
+
+.page-footer__title {
+  @include font(15px, 16px);
+  font-weight: 400;
+  color: $dark-grey;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.page-footer__button {
+  display: none;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-footer__alignment {
+    padding-top: 4px;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: column;
+  }
+
+  .page-footer__wrapper-info {
+    padding-top: 23px;
+  }
+
+  .page-footer__link-logo {
+    margin-bottom: 0;
+    margin-right: 30px;
+    margin-left: 25px;
+  }
+
+  .page-footer__wrapper-content {
+    padding-bottom: 36px;
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .page-footer__alignment {
+    padding-top: 30px;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: column;
+  }
+
+  .page-footer__wrapper-content {
+    padding-bottom: 0;
+  }
+
+  .page-footer__wrapper-info {
+    flex-direction: column;
+  }
+
+  .page-footer__link-logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+  }
+
+  .page-footer__title {
+    margin-top: 29px;
+    margin-bottom: 27px;
+  }
+
+  .page-footer__button {
+    display: block;
+    @include size(22px, 22px);
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+
+    &:hover svg {
+      color: $blue;
+    }
+
+    &:focus {
+      outline: 1px solid $blue;
+    }
+
+    &:active svg {
+      color: $blue-active;
+    }
+  }
+
+  .page-footer__button svg {
+    color: $background-img;
+    position: relative;
+    top: 1px;
+    right: 3px;
+  }
+
+  .page-footer__svg-close {
+    position: relative;
+    top: -7px;
+    display: none;
+  }
+}

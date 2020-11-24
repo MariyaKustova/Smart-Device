@@ -1,0 +1,17 @@
+.no-js {
+  .no-js__button {
+    display: none;
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .no-js {
+    .no-js__button {
+      display: none;
+    }
+
+    .no-js__list {
+      display: block;
+    }
+  }
+}

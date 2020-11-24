@@ -15,15 +15,18 @@
   <link rel="preload" href="./fonts/roboto-condensed-700.woff2" as="font" type="font/woff" crossorigin />
 </head>
 
-<body class="no-js">
+<body class="">
   <header class="page-header">
     <div class="page-header__wrapper-alignment">
-      <a class="page-header__link-logo">
-        <img class="page-header__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
-        <div class="page-header__wrapper-text">
-          <img class="page-header__logo-title" src="./img/smart-device-logo.svg" width="134" height="30"
-            alt="Smart Device">
-          <img class="page-header__logo-text" src="./img/text-logo.svg" width="90" height="15" alt="Умные технологии">
+      <a class="page-header__link-logo logo">
+        <img class="page-header__img logo__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
+        <div class="page-header__wrapper-text logo__wrapper-text">
+          <svg class="page-header__logo-title logo__title" width="134px" height="30px">
+            <use xlink:href="./img/sprite.svg#smart-device-icon"></use>
+          </svg>
+          <svg class="page-header__logo-title logo__text" width="106px" height="15px">
+            <use xlink:href="./img/sprite.svg#text-icon"></use>
+          </svg>
         </div>
       </a>
       <nav class="page-header__nav main-menu">
@@ -71,8 +74,8 @@
         ./img/webp/electronic-board-mobile@1x.webp 2x
       " />
         <!-- 1x: 705px*515px, 2x: 1410px*1030px -->
-        <img class="page-header__img-product" src="./img/electronic-board@1x.png" srcset="./img/electronic-board@2x.png 2x"
-          width="705" height="515" alt="Фото печатной платы" />
+        <img class="page-header__img-product" src="./img/electronic-board@1x.png"
+          srcset="./img/electronic-board@2x.png 2x" width="705" height="515" alt="Фото печатной платы" />
       </picture>
     </div>
   </header>
@@ -261,124 +264,133 @@
       </div>
     </section>
   </main>
+
   <footer class="page-footer" id="page-footer">
-    <div class="page-footer__alignment">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <a class="page-footer__link-logo">
-            <img class="page-footer__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
-            <div class="page-footer__wrapper-text">
-              <img class="page-footer__logo-text" src="./img/smart-device-logo.svg" width="134" height="30"
-                alt="Smart Device">
-              <img class="page-footer__logo-text" src="./img/text-logo.svg" width="106" height="15"
-                alt="Умные технологии">
+    <div class="page-footer__wrapper-content">
+      <div class="page-footer__alignment">
+        <div class="page-footer__wrapper">
+          <div class="page-footer__contacts contacts">
+            <a class="page-footer__link-logo logo">
+              <img class="page-footer__img logo__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
+              <div class="page-footer__wrapper-text logo__wrapper-text">
+                <svg class="page-footer__logo-title logo__title" width="134px" height="30px">
+                  <use xlink:href="./img/sprite.svg#service-device-icon"></use>
+                </svg>
+                <svg class="page-footer__logo-text logo__text" width="106px" height="15px">
+                  <use xlink:href="./img/sprite.svg#text-icon"></use>
+                </svg>
+              </div>
+            </a>
+            <p class="contacts__text">1999-2018 SD Service Devices</p>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  <svg width="27px" height="27px">
+                    <use xlink:href="./img/sprite.svg#facebook-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  <svg width="27px" height="27px">
+                    <use xlink:href="./img/sprite.svg#classmates-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  <svg width="27px" height="27px">
+                    <use xlink:href="./img/sprite.svg#vk-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__wrapper-info">
+            <div class="page-footer__site-sections site-sections open-list">
+              <div class="site-sections__wrapper">
+                <h3 class="page-footer__title">Разделы сайта</h3>
+                <button class="page-footer__button no-js__button" type="button">
+                  <svg class="page-footer__svg-open open-list__svg-open" width="16px" height="16px">
+                    <use xlink:href="./img/sprite.svg#plus-icon"></use>
+                  </svg>
+                  <svg class="page-footer__svg-close open-list__svg-close" width="16px" height="2px">
+                    <use xlink:href="./img/sprite.svg#minus-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <ul class="site-sections__list no-js__list open-list__list">
+                <li>
+                  <a class="site-sections__link" href="#">О компании</a>
+                </li>
+                <li>
+                  <a class="site-sections__link" href="#">Продукты</a>
+                </li>
+                <li>
+                  <a class="site-sections__link" href="#">Производство печатных плат</a>
+                </li>
+                <li>
+                  <a class="site-sections__link" href="#">Монтаж печатных плат</a>
+                </li>
+                <li>
+                  <a class="site-sections__link" href="#">Комплектующие</a>
+                </li>
+                <li>
+                  <a class="site-sections__link" href="#">Доставка</a>
+                </li>
+                <li>
+                  <a class="site-sections__link" href="#">Контакты</a>
+                </li>
+              </ul>
             </div>
-          </a>
-          <p class="contacts__text">1999-2018 SD Service Devices</p>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a class="contacts__link" href="#">
-                <svg width="27px" height="27px">
-                  <use xlink:href="./img/sprite.svg#facebook-icon"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="#">
-                <svg width="27px" height="27px">
-                  <use xlink:href="./img/sprite.svg#classmates-icon"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="#">
-                <svg width="27px" height="27px">
-                  <use xlink:href="./img/sprite.svg#vk-icon"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__site-sections site-sections">
-          <div class="site-sections__wrapper">
-            <h3 class="page-footer__title">Разделы сайта</h3>
-            <button class="no-js__button site-sections__button" type="button">
-              <svg class="site-sections__svg-open" width="16px" height="16px">
-                <use xlink:href="./img/sprite.svg#plus-icon"></use>
-              </svg>
-              <svg class="site-sections__svg-close" width="16px" height="1px">
-                <use xlink:href="./img/sprite.svg#minus-icon"></use>
-              </svg>
-            </button>
+            <div class="page-footer__address address">
+              <div class="address__wrapper">
+                <h3 class="page-footer__title">Наш офис</h3>
+                <button class="page-footer__button no-js__button" type="button">
+                  <svg class="page-footer__svg-open open-list__svg-open" width="16px" height="16px">
+                    <use xlink:href="./img/sprite.svg#plus-icon"></use>
+                  </svg>
+                  <svg class="page-footer__svg-close open-list__svg-close" width="16px" height="1px">
+                    <use xlink:href="./img/sprite.svg#minus-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <ul class="address__list no-js__list">
+                <li class="address__item">
+                  <p class="address__text">г. Мытищи, Олимпийский проспект, д.10</p>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel.:+74955894050">+7 (495) 589-40-50</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel.:+79250038767"> +7 (925) 003-87-67</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel.:+792692608079"> +7 (926) 926-080-79</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul class="site-sections__list">
-            <li>
-              <a class="site-sections__link" href="#">О компании</a>
-            </li>
-            <li>
-              <a class="site-sections__link" href="#">Продукты</a>
-            </li>
-            <li>
-              <a class="site-sections__link" href="#">Производство печатных плат</a>
-            </li>
-            <li>
-              <a class="site-sections__link" href="#">Монтаж печатных плат</a>
-            </li>
-            <li>
-              <a class="site-sections__link" href="#">Комплектующие</a>
-            </li>
-            <li>
-              <a class="site-sections__link" href="#">Доставка</a>
-            </li>
-            <li>
-              <a class="site-sections__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__address address">
-          <div class="address__wrapper">
-            <h3 class="page-footer__title">Наш офис</h3>
-            <button class="no-js__button address__button" type="button">
-              <svg class="address__svg-open" width="16px" height="16px">
-                <use xlink:href="./img/sprite.svg#plus-icon"></use>
-              </svg>
-              <svg class="address__svg-close" width="16px" height="1px">
-                <use xlink:href="./img/sprite.svg#minus-icon"></use>
-              </svg>
-            </button>
-          </div>
-          <ul class="address__list">
-            <li class="address__item">
-              <p class="address__text">г. Мытищи, Олимпийский проспект, д.10</p>
-            </li>
-            <li class="address__item">
-              <a href="tel.:+74955894050">+7 (495) 589-40-50</a>
-            </li>
-            <li class="address__item">
-              <a href="tel.:+79250038767"> +7 (925) 003-87-67</a>
-            </li>
-            <li class="address__item">
-              <a href="tel.:+792692608079"> +7 (926) 926-080-79</a>
-            </li>
-          </ul>
         </div>
       </div>
-      <div class="page-footer__info additional-info">
-        <ul class="additional-info__list">
-          <li class="additional-info__item">
-            <p class="additional-info__text">Все права защищены</p>
-          </li>
-          <li class="additional-info__item">
-            <p class="additional-info__text">1999-2018 SD Service Devices</p>
-          </li>
-          <li class="additional-info__item">
-            <a class="additional-info__link" href="#">Условия конфиденциальности</a>
-          </li>
-          <li class="additional-info__item">
-            <a class="additional-info__link" href="#">Developed by wow studio </a>
-          </li>
-        </ul>
-      </div>
+    </div>
+    <div class="page-footer__info additional-info">
+      <ul class="additional-info__list">
+        <li class="additional-info__item">
+          <p class="additional-info__text">Все права защищены</p>
+        </li>
+        <li class="additional-info__item">
+          <p class="additional-info__text">1999-2018 SD Service Devices</p>
+        </li>
+      </ul>
+      <ul class="additional-info__list-link">
+        <li class="additional-info__item-link">
+          <a class="additional-info__link" href="#">Условия конфиденциальности</a>
+        </li>
+        <li class="additional-info__item-link">
+          <a class="additional-info__link" href="#">Developed by wow studio </a>
+        </li>
+      </ul>
     </div>
   </footer>
 
