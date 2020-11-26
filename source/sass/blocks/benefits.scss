@@ -1,0 +1,158 @@
+.benefits {
+  max-width: 1920px;
+  box-sizing: border-box;
+  padding-top: 112px;
+  position: relative;
+}
+
+.benefits__wrapper {
+  margin-bottom: 74px;
+}
+
+.benefits__list {
+  @include list-reset();
+  max-width: 1223px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  &::before {
+    content: '';
+    display: block;
+    @include size(100%, 100%);
+    background-image: url('../../img/polygon.svg'), url('../../img/polygon.svg');
+    background-size: 636px 636px, 298px 298px;
+    background-repeat: no-repeat;
+    background-position: 10% 20%, 10% 20%;
+  }
+}
+
+.benefits__item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+
+.benefits__item {
+  box-sizing: border-box;
+  width: calc(50% - 16px);
+  max-width: 571.5px;
+  min-width: 355px;
+  min-height: 299px;
+  border-top: 1px solid $color-border;
+  border-right: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  border-left: 3px solid $blue;
+  margin-bottom: 30px;
+  padding: 40px 43px;
+
+  &:hover {
+    background-color: $blue;
+    border-top: 1px solid $blue;
+    border-right: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+
+    h3 {
+      color: $white;
+    }
+
+    p {
+      color: $white;
+    }
+
+    svg {
+      color: $white;
+    }
+  }
+
+  h3 {
+    @include font(24px, 34px);
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: 'PT Mono';
+    @include font(16px, 22px);
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  svg {
+    color: $blue;
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .benefits {
+    padding-left: 25px;
+    padding-right: 22px;
+    padding-top: 54px;
+  }
+
+  .benefits__wrapper {
+    margin-bottom: 27px;
+}
+
+  .benefits__list {
+    padding: 0;
+  }
+
+  .benefits__item {
+    padding: 23px 20px 19px 25px;
+    min-width: 345px;
+    min-height: 232px;
+
+    h3 {
+      margin-top: 4px;
+    }
+
+    p {
+      margin-top: 9px;
+    }
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .benefits {
+    min-width: 320px;
+    padding-left: 14px;
+    padding-right: 16px;
+    padding-top: 37px;
+  }
+
+  .benefits__wrapper {
+    margin-bottom: 37px;
+  }
+
+  .benefits__list {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits__item {
+    width: 290px;
+    min-width: 290px;
+    box-sizing: border-box;
+    padding: 23px 13.4px 23px 23px;
+    min-height: 232px;
+    margin-bottom: 20px;
+
+    h3 {
+      @include font(20px, 28px);
+      margin-top: 10px;
+    }
+
+    p {
+      @include font(16px, 22px);
+      margin-top: 9px;
+    }
+  }
+
+  .benefits__item:not(:nth-child(2n)) {
+    margin-right: 0;
+  }
+}
