@@ -2,12 +2,12 @@
 @import "variables";
 @import "mixins";
 @import "fonts";
+@import "html";
 @import "body";
 @import "blocks/visually-hidden.scss";
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
 @import "blocks/main-menu.scss";
-@import "blocks/page-main.scss";
 @import "blocks/benefits.scss";
 @import "blocks/info.scss";
 @import "blocks/products.scss";
@@ -18,5 +18,6 @@
 @import "blocks/site-sections.scss";
 @import "blocks/address.scss";
 @import "blocks/additional-info.scss";
-@import "blocks/open-list.scss";
 @import "blocks/popup.scss";
+@import "blocks/overlay.scss";
+@import "blocks/open.scss";

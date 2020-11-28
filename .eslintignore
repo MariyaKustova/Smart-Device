@@ -1,0 +1,4 @@
+/.git
+/.vscode
+node_modules
+source/js/vendor.min.js

@@ -10,27 +10,42 @@
   padding-top: 91px;
   padding-bottom: 113px;
   position: relative;
-  background-image: url(../../img/paper_airplane@1x.png),url(../../img/polygon.svg),url(../../img/polygon-mini.svg);
-  background-repeat: no-repeat;
-  background-size: 511px 288px,550px 475px,330px 278px;
-  background-position: 22.9% 42%,16.5% 51%,11% 76%;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/paper_airplane@2x.png");
-  }
 
   &::before {
-    content: '';
+    content: "";
     display: block;
-    @include size(300px, 670px);
+
+    @include size(300px, 620px);
     position: absolute;
     top: 0;
     right: 0;
 
-    background-image: url(../../img/polygon-left.svg),url(../../img/polygon-right.svg);
+    background-image: url("../../img/polygon-left.svg"), url("../../img/polygon-desktop.svg");
     background-repeat: no-repeat;
-    background-size: 268px 255px,340px 408px;
-    background-position: 60.5% 10%,103.5% 109%;
+    background-size: 268px 255px, 341px 402px;
+    background-position: 19px 42px, -44px 289px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+
+    @include size(675px, 670px);
+    position: absolute;
+    top: 0;
+    left: 10%;
+
+    background-image: url("../../img/paper_airplane@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+    background-repeat: no-repeat;
+    background-size: 511px 288px, 553px 475px, 326px 278px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+    background-position: 159px 161px, 59px 99px, 8px 296px, 55px 94px, 606px 94px, 5px 292px, 166px 571px, 331px 571px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/paper_airplane@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-repeat: no-repeat;
+      background-size: 511px 288px, 553px 475px, 326px 278px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+      background-position: 159px 161px, 59px 99px, 8px 296px, 55px 94px, 606px 94px, 5px 292px, 166px 571px, 331px 571px;
+    }
   }
 }
 
@@ -39,17 +54,20 @@
   max-width: 575px;
   box-sizing: border-box;
   position: relative;
-  left: 51.2%;
+  z-index: 1;
+  left: 52.6%;
 
   form {
     padding-left: 3px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     border: none;
     background-color: $blue-input;
-    font-family: 'PT Mono';
+    font-family: "PT-Mono", "Arial", sans-serif;
+
     @include font(16px, 22px);
     font-weight: 400;
     color: $white;
@@ -85,7 +103,8 @@
 }
 
 .form__text {
-  font-family: 'PT Mono';
+  font-family: "PT-Mono", "Arial", sans-serif;
+
   @include font(16px, 22px);
   font-weight: 400;
   margin-top: 0;
@@ -117,6 +136,7 @@
     border-radius: 5px;
     padding: 14px 15px;
     color: $white;
+
     @include font(14px, 16px);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -139,7 +159,8 @@
   }
 
   label {
-    font-family: 'PT Mono';
+    font-family: "PT-Mono", "Arial", sans-serif;
+
     @include font(14px, 16px);
     font-weight: 400;
     color: $white;
@@ -201,7 +222,8 @@
     padding-top: 80px;
     padding-bottom: 104px;
 
-    &::before {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -236,6 +258,10 @@
       margin-bottom: 41px;
     }
   }
+
+  .form__wrapper-control label {
+    width: 49%;
+  }
 }
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
@@ -246,7 +272,8 @@
     padding-top: 30px;
     padding-bottom: 43px;
 
-    &::before {
+    &::before,
+    &::after {
       display: none;
     }
   }

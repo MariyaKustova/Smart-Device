@@ -29,7 +29,7 @@
 }
 
 .page-footer__img {
-    @include size(52px, 52px);
+  @include size(52px, 52px);
 }
 
 .page-footer__wrapper-text {
@@ -109,6 +109,7 @@
 
   .page-footer__button {
     display: block;
+
     @include size(22px, 22px);
     margin-left: auto;
     border: none;

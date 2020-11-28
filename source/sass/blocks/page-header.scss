@@ -16,14 +16,18 @@
   max-width: 1462px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-left: 25px;
+  padding-left: 19px;
   padding-right: 27px;
+}
+
+.page-header__wrapper-alignment--nav {
   display: flex;
 }
 
 .page-header__link-logo {
   min-width: 202px;
   margin-right: 30px;
+  margin-left: 4px;
   padding-top: 33px;
 }
 
@@ -35,6 +39,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 5px;
+  z-index: 2;
 }
 
 .page-header__logo-title {
@@ -42,17 +47,30 @@
 }
 
 .page-header__wrapper-content {
-  @include alignment-desktop();
-  padding-left: 249px;
+  max-width: 1920px;
+  box-sizing: border-box;
+  margin: 0 auto;
   padding-top: 173px;
   position: relative;
-  background-image: url(../../img/electronic-board@1x.png),url(../../img/polygon.svg),url(../../img/polygon-mini.svg);
-  background-repeat: no-repeat;
-  background-size: 705px 515px,550px 475px,330px 278px;
-  background-position: 85.5% 93%,81% 85%,66% 92%;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/electronic-board@2x.png");
+  &::before {
+    content: "";
+    display: block;
+
+    @include size(705px, 515px);
+    position: absolute;
+    right: 9.1%;
+    background-image: url("../../img/electronic-board@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+    background-repeat: no-repeat;
+    background-size: 707px 515px, 553px 475px, 328px 278px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+    background-position: -1px 0, 67px 19px, 13px 218px, 172px 490px, 63px 14px, 339px 490px, 612px 14px, 11px 215px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/electronic-board@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-repeat: no-repeat;
+      background-size: 707px 515px, 553px 475px, 328px 278px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+      background-position: -1px 0, 67px 19px, 13px 218px, 172px 490px, 63px 14px, 339px 490px, 612px 14px, 11px 215px;
+    }
   }
 }
 
@@ -62,6 +80,7 @@
   letter-spacing: 5.7px;
   margin-top: 57px;
   margin-bottom: 25px;
+  position: relative;
 
   @include font(80px, 94px);
   font-weight: 700;
@@ -72,15 +91,16 @@
   color: $white;
 
   @include font(22px, 35px);
-  font-family: 'PT Mono';
+  font-family: "PT-Mono", "Arial", sans-serif;
   font-weight: 400;
   position: relative;
   padding-left: 98px;
   margin-bottom: 42px;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
+
     @include size (66px, 2px);
     background-color: $white;
     position: relative;
@@ -91,8 +111,8 @@
 
 .page-header__button {
   font-weight: 700;
-  @include link-reset($white);
 
+  @include link-reset($white);
   @include font(16px, 19px);
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -104,6 +124,7 @@
   margin-left: 98px;
   display: inline-block;
   vertical-align: top;
+  position: relative;
 
   &:hover {
     background-color: $blue-hover;
@@ -111,6 +132,7 @@
 
   &:focus {
     background-color: $blue-hover;
+    outline: 1px solid $white;
   }
 
   &:active {
@@ -120,13 +142,15 @@
 
 .page-header__link {
   display: block;
+  max-height: 150px;
   position: relative;
   writing-mode: tb-rl;
-  transform:rotate(180deg);
+  transform: rotate(180deg);
+
   @include link-reset($white);
   @include font(14px, 16px);
 
-  font-family: 'PT Mono';
+  font-family: "PT-Mono", "Arial", sans-serif;
   font-weight: 400;
   margin-top: 91px;
   margin-left: 4px;
@@ -137,6 +161,7 @@
 
   &:focus {
     color: $blue-hover;
+    outline: 1px solid $blue;
   }
 
   &:active {
@@ -163,7 +188,7 @@
   }
 
   .page-header__link-logo {
-    margin-left: 0px;
+    margin-left: 0;
     padding-top: 20px;
   }
 
@@ -173,16 +198,26 @@
   }
 
   .page-header__wrapper-content {
-    padding-left: 87px;
+    padding-left: 62px;
     padding-right: 25px;
     padding-top: 59px;
 
-    background-image: url(../../img/electronic-board-tablet@1x.png),url(../../img/polygon.svg),url(../../img/polygon-mini.svg);
-    background-size: 261px 340px,430px 377px,262px 218px;
-    background-position: 100.5% 37%,148.5% 20%,90.5% 73%;
+    &::before {
+      @include size(315px, 400px);
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url("../../img/electronic-board-tablet@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-repeat: no-repeat;
+      background-size: 258px 339px, 436px 378px, 252px 217px, 8px 8px, 8px 8px, 8px 8px, 8px 8px;
+      background-position: 57px 41px, 47px 15px, 8px 171px, 261px 385px, 44px 10px, 131px 385px, 4px 167px;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/electronic-board-tablet@2x.png");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/electronic-board-tablet@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+        background-repeat: no-repeat;
+        background-size: 258px 339px, 436px 378px, 252px 217px, 8px 8px, 8px 8px, 8px 8px, 8px 8px;
+        background-position: 57px 41px, 47px 15px, 8px 171px, 261px 385px, 44px 10px, 131px 385px, 4px 167px;
+      }
     }
   }
 
@@ -194,7 +229,8 @@
   }
 
   .page-header__text {
-    width: 52%;
+    width: 55%;
+
     @include font(18px, 28px);
     padding-left: 52px;
     margin-bottom: 55px;
@@ -249,13 +285,24 @@
   .page-header__wrapper-content {
     @include alignment-mobile();
     padding-top: 168px;
+    padding-left: 0;
 
-    background-image: url(../../img/electronic-board-mobile@1x.png),url(../../img/polygon.svg),url(../../img/polygon-mini.svg);
-    background-size: 292px 225px,210px 185px,260px 210px;
-    background-position: 92.5% 10%,191.5% 4%,272.5% 53%;
+    &::before {
+      @include size(315px, 400px);
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url("../../img/electronic-board-mobile@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-repeat: no-repeat;
+      background-size: 292px 220px, 217px 185px, 234px 213px, 7px 7px, 7px 7px;
+      background-position: 22px 31px, 204px 13px, 170px 162px, 284px 368px, 201px 9px;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/electronic-board-mobile@2x.png");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/electronic-board-mobile@2x.png"), url("../../img/polygon.svg"), rl("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+        background-repeat: no-repeat;
+        background-size: 292px 220px, 217px 185px, 234px 213px, 7px 7px, 7px 7px;
+        background-position: 22px 31px, 204px 13px, 170px 162px, 284px 368px, 201px 9px;
+      }
     }
   }
 

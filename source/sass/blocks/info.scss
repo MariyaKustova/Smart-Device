@@ -6,12 +6,14 @@
   padding-right: 27px;
   padding-bottom: 111px;
   position: relative;
+  z-index: 1;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
+
     @include size(216px, 318px);
-    background-image: url('../../img/2005@1x.png');
+    background-image: url("../../img/2005@1x.png");
     background-repeat: no-repeat;
     background-size: 216px 318px;
     position: absolute;
@@ -25,14 +27,15 @@
   }
 }
 
-.info__title{
+.info__title {
   @include font(36px, 51px);
   font-weight: 400;
   margin-bottom: 22px;
 }
 
 .info__text {
-  font-family: 'PT Mono';
+  font-family: "PT-Mono", "Arial", sans-serif;
+
   @include font(16px, 22px);
   font-weight: 400;
   margin-top: 20px;
@@ -44,6 +47,7 @@
 
   @include link-reset($blue);
   border: 1px solid $blue;
+  background-color: $white;
   border-radius: 5px;
   margin-top: 23px;
   display: inline-block;
@@ -59,6 +63,12 @@
     color: $white;
   }
 
+  &:focus {
+    background-color: $blue;
+    outline: 1px solid $blue;
+    color: $white;
+  }
+
   &:active {
     background-color: $blue-active;
     color: $white;
@@ -71,7 +81,7 @@
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .info {
-    padding-left: 185px;
+    padding-left: 211px;
     padding-right: 0;
     padding-bottom: 84px;
 
@@ -80,11 +90,11 @@
       height: 360px;
       background-size: 250px 360px;
       top: -3px;
-      left: -33px;
+      left: -8px;
     }
   }
 
-  .info__title{
+  .info__title {
     @include font(32px, 45px);
     margin-top: 0;
     margin-bottom: 24px;
@@ -119,7 +129,7 @@
     }
   }
 
-  .info__title{
+  .info__title {
     @include font(28px, 39px);
     margin-top: 0;
     margin-bottom: 21px;

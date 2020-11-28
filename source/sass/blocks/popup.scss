@@ -5,6 +5,7 @@
   background-color: $blue;
   color: $white;
   position: absolute;
+  z-index: 2;
   top: 136px;
   left: 50%;
   transform: translateX(-50%);
@@ -19,7 +20,8 @@
 }
 
 .popup__text {
-  font-family: 'PT Mono';
+  font-family: "PT-Mono", "Arial", sans-serif;
+
   @include font(16px, 22px);
   font-weight: 400;
   margin-top: 0;
@@ -56,18 +58,21 @@
 .popup__wrapper {
   label {
     width: 100%;
-    font-family: 'PT Mono';
+    font-family: "PT-Mono", "Arial", sans-serif;
+
     @include font(14px, 16px);
     font-weight: 400;
     color: $white;
     display: flex;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     border: none;
     background-color: $blue-input;
-    font-family: 'PT Mono';
+    font-family: "PT-Mono", "Arial", sans-serif;
+
     @include font(16px, 22px);
     font-weight: 400;
     color: $white;
@@ -100,6 +105,7 @@
     padding: 14px 15px 15px;
     margin-bottom: 34px;
     color: $white;
+
     @include font(14px, 16px);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -155,5 +161,3 @@
     outline: 1px solid $white;
   }
 }
-
-

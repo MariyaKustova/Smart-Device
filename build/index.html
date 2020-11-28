@@ -14,16 +14,16 @@
   <link rel="preload" href="./fonts/roboto-condensed-700.woff2" as="font" type="font/woff" crossorigin="">
 </head>
 
-<body class="">
+<body class="no-js">
   <header class="page-header">
-    <div class="page-header__wrapper-alignment">
+    <div class="page-header__wrapper-alignment page-header__wrapper-alignment--nav">
       <a class="page-header__link-logo logo">
         <img class="page-header__img logo__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
         <div class="page-header__wrapper-text logo__wrapper-text">
-          <svg class="page-header__logo-title logo__title" width="134px" height="30px">
+          <svg class="page-header__logo-title logo__title" width="134" height="30">
             <use xlink:href="./img/sprite.svg#smart-device-icon"></use>
           </svg>
-          <svg class="page-header__logo-title logo__text" width="106px" height="15px">
+          <svg class="page-header__logo-title logo__text" width="106" height="15">
             <use xlink:href="./img/sprite.svg#text-icon"></use>
           </svg>
         </div>
@@ -31,44 +31,47 @@
       <nav class="page-header__nav main-menu">
         <ul class="main-menu__list">
           <li class="main-menu__list-item">
-            <a class="main-menu__link" href="mailto:info@sd.ru">
-              <svg class="main-menu__svg main-menu__svg--mail" width="20px" height="18px">
+            <a href="mailto:info@sd.ru">
+              <svg class="main-menu__svg-mail" width="20" height="18">
                 <use xlink:href="./img/sprite.svg#mail-icon"></use>
               </svg>
               <span>info@sd.ru</span>
             </a>
           </li>
           <li class="main-menu__list-item">
-            <a class="main-menu__link" href="tel:+74950005252">
-              <svg class="main-menu__svg main-menu__svg--phone" width="19px" height="19px">
+            <a href="tel:+74950005252">
+              <svg class="main-menu__svg-phone" width="19" height="19">
                 <use xlink:href="./img/sprite.svg#phone-icon"></use>
               </svg>
               <span>+7 (495) 000 52 52</span>
             </a>
           </li>
         </ul>
-        <button class="main-menu__button button" type="button">Заказать звонок</button>
+        <button class="main-menu__button" type="button">Заказать звонок</button>
       </nav>
     </div>
     <div class="page-header__wrapper-content">
-      <h1 class="page-header__heading">Печатные платы</h1>
-      <p class="page-header__text">
-        производство и монтаж, поставка комплектующих, блоков и модулей
-      </p>
-      <a class="page-header__button" href="#page-footer">
-        <span class="page-header__span-1">Получить бесплатную консультацию</span>
-        <span class="page-header__span-2">Бесплатная консультация</span>
-      </a>
-      <a class="page-header__link" href="#benefits">Скролл вниз</a>
+      <div class="page-header__wrapper-alignment">
+        <h1 class="page-header__heading">Печатные платы</h1>
+        <p class="page-header__text">
+          производство и монтаж, поставка комплектующих, блоков и модулей
+        </p>
+        <a class="page-header__button" href="#page-footer">
+          <span class="page-header__span-1">Получить бесплатную консультацию</span>
+          <span class="page-header__span-2">Бесплатная консультация</span>
+        </a>
+        <a class="page-header__link" href="#benefits">Скролл вниз</a>
+      </div>
     </div>
   </header>
   <main class="page-main">
     <div class="page-main__wrapper">
       <section class="page-main__benefits benefits" id="benefits">
+        <h2 class="visually-hidden">Преимущества</h2>
         <div class="benefits__wrapper">
           <ul class="benefits__list">
             <li class="benefits__item">
-              <svg width="29px" height="35px">
+              <svg width="29" height="35">
                 <use xlink:href="./img/sprite.svg#stopwatch-icon"></use>
               </svg>
               <h3>
@@ -78,18 +81,18 @@
                 производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </li>
             <li class="benefits__item">
-              <svg width="35px" height="35px">
+              <svg width="35" height="35">
                 <use xlink:href="./img/sprite.svg#hired-icon"></use>
               </svg>
               <h3>
                 Крупные поставщики
               </h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE,&nbsp;HOLGLITRONIC,
+              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC,
                 REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
               </p>
             </li>
             <li class="benefits__item">
-              <svg width="36px" height="31px">
+              <svg width="36" height="31">
                 <use xlink:href="./img/sprite.svg#detective-icon"></use>
               </svg>
               <h3>
@@ -98,7 +101,7 @@
               <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
             </li>
             <li class="benefits__item">
-              <svg width="35px" height="35px">
+              <svg width="35" height="35">
                 <use xlink:href="./img/sprite.svg#tag-icon"></use>
               </svg>
               <h3>
@@ -124,7 +127,8 @@
             </p>
             <a class="info__link" href="#">Подробнее</a>
           </div>
-      </div></section>
+        </div>
+      </section>
     </div>
     <section class="page-main__products products">
       <div class="products__wrapper">
@@ -148,14 +152,14 @@
                 ">
                   <!-- Размер без ретины - 370 * 620
               Размер с ретиной - 740 * 1240 -->
-                  <img src="./img/product-1-desktop@1x.png" srcset="./img/product-1-desktop@2x.png 2x" width="560" height="301" alt="Фотография  пингвинов">
+                  <img src="./img/product-1-desktop@1x.png" srcset="./img/product-1-desktop@2x.png 2x" width="560" height="301" alt="Фотография производства печатных плат">
                 </picture>
                 <h3>Производство печатных плат</h3>
-                <button type="button">
-                  <svg width="8px" height="4px">
+                <div>
+                  <svg width="8" height="4">
                     <use xlink:href="./img/sprite.svg#vector-icon"></use>
                   </svg>
-                </button>
+                </div>
               </a>
             </li>
             <li class="products__item">
@@ -174,14 +178,14 @@
                 ./img/webp/product-2-mobile@1x.webp 2x
               ">
                   <!-- 1х: 370px * 620px; 2x: 740px * 1240px -->
-                  <img src="./img/product-2-desktop@1x.png" srcset="./img/product-2-desktop@2x.png 2x" width="560" height="301" alt="Фотография  пингвинов">
+                  <img src="./img/product-2-desktop@1x.png" srcset="./img/product-2-desktop@2x.png 2x" width="560" height="301" alt="Фотография  монтажа печатных плат">
                 </picture>
                 <h3>Монтаж печатных плат</h3>
-                <button type="button">
-                  <svg width="8px" height="4px">
+                <div>
+                  <svg width="8" height="4">
                     <use xlink:href="./img/sprite.svg#vector-icon"></use>
                   </svg>
-                </button>
+                </div>
               </a>
             </li>
             <li class="products__item">
@@ -200,42 +204,43 @@
                 ./img/webp/product-3-mobile@1x.webp 2x
               ">
                   <!-- 1х: 370px * 620px; 2x: 740px * 1240px -->
-                  <img src="./img/product-3-desktop@1x.png" srcset="./img/product-3-desktop@2x.png 2x" width="560" height="301" alt="Фотография  пингвинов">
+                  <img src="./img/product-3-desktop@1x.png" srcset="./img/product-3-desktop@2x.png 2x" width="560" height="301" alt="Фотография  комплектующих для светотехники">
                 </picture>
                 <h3>Комплектующие для светотехники</h3>
-                <button type="button">
-                  <svg width="8px" height="4px">
+                <div>
+                  <svg width="8" height="4">
                     <use xlink:href="./img/sprite.svg#vector-icon"></use>
                   </svg>
-                </button>
+                </div>
               </a>
             </li>
           </ul>
         </div>
-    </div></section>
+      </div>
+    </section>
     <section class="page-main__form form">
       <div class="form__wrapper">
         <div class="form__wrapper-content">
           <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
           <p class="form__text">Мы проконсультируем Вас бесплатно</p>
-          <form method="POST" action="https://echo.htmlacademy.ru">
+          <form id="form" method="POST" action="https://echo.htmlacademy.ru">
             <div class="form__wrapper-input">
               <label>
-                <input type="text" name="name" required="" placeholder="Имя">
+                <input type="text" name="name" autocomplete="off" required="" placeholder="Имя">
               </label>
               <label>
-                <input type="tel" name="phone" pattern="+[0-9]{11}" required="" placeholder="Телефон">
+                <input type="tel" id="input-phone-form" name="phone" autocomplete="off" pattern="[+]7[\(]\d{10}[\)]" value="" required="" placeholder="Телефон" minlength="14" maxlength="14" title="Используйте формат: +7(7777777777)">
               </label>
             </div>
             <label>
-              <textarea name="question" required="">Ваш вопрос</textarea>
+              <textarea name="question" placeholder="Ваш вопрос" required=""></textarea>
             </label>
             <div class="form__wrapper-control">
               <button type="submit">Задать вопрос</button>
               <label>
                 <input class="visually-hidden" type="checkbox" name="consent" required="">
                 <span>
-                  <svg width="15px" height="6px">
+                  <svg width="15" height="6">
                     <use xlink:href="./img/sprite.svg#check-mark-icon"></use>
                   </svg>
                 </span>
@@ -256,10 +261,10 @@
             <a class="page-footer__link-logo logo">
               <img class="page-footer__img logo__img" src="./img/logo.svg" width="52" height="52" alt="Логотип">
               <div class="page-footer__wrapper-text logo__wrapper-text">
-                <svg class="page-footer__logo-title logo__title" width="134px" height="30px">
+                <svg class="page-footer__logo-title logo__title" width="134" height="30">
                   <use xlink:href="./img/sprite.svg#service-device-icon"></use>
                 </svg>
-                <svg class="page-footer__logo-text logo__text" width="106px" height="15px">
+                <svg class="page-footer__logo-text logo__text" width="106" height="15">
                   <use xlink:href="./img/sprite.svg#text-icon"></use>
                 </svg>
               </div>
@@ -267,22 +272,25 @@
             <p class="contacts__text">1999-2018 SD Service Devices</p>
             <ul class="contacts__list">
               <li class="contacts__item">
-                <a class="contacts__link" href="#">
-                  <svg width="27px" height="27px">
+                <a href="#">
+                  <span class="visually-hidden">facebook</span>
+                  <svg width="27" height="27">
                     <use xlink:href="./img/sprite.svg#facebook-icon"></use>
                   </svg>
                 </a>
               </li>
               <li class="contacts__item">
-                <a class="contacts__link" href="#">
-                  <svg width="27px" height="27px">
+                <a href="#">
+                  <span class="visually-hidden">Одноклассники</span>
+                  <svg width="27" height="27">
                     <use xlink:href="./img/sprite.svg#classmates-icon"></use>
                   </svg>
                 </a>
               </li>
               <li class="contacts__item">
-                <a class="contacts__link" href="#">
-                  <svg width="27px" height="27px">
+                <a href="#">
+                  <span class="visually-hidden">vkontakte</span>
+                  <svg width="27" height="27">
                     <use xlink:href="./img/sprite.svg#vk-icon"></use>
                   </svg>
                 </a>
@@ -290,66 +298,66 @@
             </ul>
           </div>
           <div class="page-footer__wrapper-info">
-            <div class="page-footer__site-sections site-sections open-list">
+            <div class="page-footer__site-sections site-sections open">
               <div class="site-sections__wrapper">
                 <h3 class="page-footer__title">Разделы сайта</h3>
                 <button class="page-footer__button no-js__button" type="button">
-                  <svg class="page-footer__svg-open open-list__svg-open" width="16px" height="16px">
+                  <svg class="page-footer__svg-open open__svg-open" width="16" height="16">
                     <use xlink:href="./img/sprite.svg#plus-icon"></use>
                   </svg>
-                  <svg class="page-footer__svg-close open-list__svg-close" width="16px" height="2px">
+                  <svg class="page-footer__svg-close open__svg-close" width="16" height="2">
                     <use xlink:href="./img/sprite.svg#minus-icon"></use>
                   </svg>
                 </button>
               </div>
-              <ul class="site-sections__list no-js__list open-list__list">
-                <li>
-                  <a class="site-sections__link" href="#">О компании</a>
+              <ul class="site-sections__list no-js__list open__list">
+                <li class="site-sections__item">
+                  <a href="#">О компании</a>
                 </li>
-                <li>
-                  <a class="site-sections__link" href="#">Продукты</a>
+                <li class="site-sections__item">
+                  <a href="#">Продукты</a>
                 </li>
-                <li>
-                  <a class="site-sections__link" href="#">Производство печатных плат</a>
+                <li class="site-sections__item">
+                  <a href="#">Производство печатных плат</a>
                 </li>
-                <li>
-                  <a class="site-sections__link" href="#">Монтаж печатных плат</a>
+                <li class="site-sections__item">
+                  <a href="#">Монтаж печатных плат</a>
                 </li>
-                <li>
-                  <a class="site-sections__link" href="#">Комплектующие</a>
+                <li class="site-sections__item">
+                  <a href="#">Комплектующие</a>
                 </li>
-                <li>
-                  <a class="site-sections__link" href="#">Доставка</a>
+                <li class="site-sections__item">
+                  <a href="#">Доставка</a>
                 </li>
-                <li>
-                  <a class="site-sections__link" href="#">Контакты</a>
+                <li class="site-sections__item">
+                  <a href="#">Контакты</a>
                 </li>
               </ul>
             </div>
-            <div class="page-footer__address address">
+            <div class="page-footer__address address open">
               <div class="address__wrapper">
                 <h3 class="page-footer__title">Наш офис</h3>
                 <button class="page-footer__button no-js__button" type="button">
-                  <svg class="page-footer__svg-open open-list__svg-open" width="16px" height="16px">
+                  <svg class="page-footer__svg-open open__svg-open" width="16" height="16">
                     <use xlink:href="./img/sprite.svg#plus-icon"></use>
                   </svg>
-                  <svg class="page-footer__svg-close open-list__svg-close" width="16px" height="1px">
+                  <svg class="page-footer__svg-close open__svg-close" width="16" height="2">
                     <use xlink:href="./img/sprite.svg#minus-icon"></use>
                   </svg>
                 </button>
               </div>
-              <ul class="address__list no-js__list">
+              <ul class="address__list open__list no-js__list">
                 <li class="address__item">
-                  <p class="address__text">г. Мытищи, Олимпийский проспект, д.10</p>
+                  <p>г. Мытищи, Олимпийский проспект, д.10</p>
                 </li>
                 <li class="address__item">
-                  <a class="address__link" href="tel.:+74955894050">+7 (495) 589-40-50</a>
+                  <a href="tel.:+74955894050">+7 (495) 589-40-50</a>
                 </li>
                 <li class="address__item">
-                  <a class="address__link" href="tel.:+79250038767"> +7 (925) 003-87-67</a>
+                  <a href="tel.:+79250038767"> +7 (925) 003-87-67</a>
                 </li>
                 <li class="address__item">
-                  <a class="address__link" href="tel.:+792692608079"> +7 (926) 926-080-79</a>
+                  <a href="tel.:+792692608079"> +7 (926) 926-080-79</a>
                 </li>
               </ul>
             </div>
@@ -360,18 +368,18 @@
     <div class="page-footer__info additional-info">
       <ul class="additional-info__list">
         <li class="additional-info__item">
-          <p class="additional-info__text">Все права защищены</p>
+          <p>Все права защищены</p>
         </li>
         <li class="additional-info__item">
-          <p class="additional-info__text">1999-2018 SD Service Devices</p>
+          <p>1999-2018 SD Service Devices</p>
         </li>
       </ul>
       <ul class="additional-info__list-link">
         <li class="additional-info__item-link">
-          <a class="additional-info__link" href="#">Условия конфиденциальности</a>
+          <a href="#">Условия конфиденциальности</a>
         </li>
         <li class="additional-info__item-link">
-          <a class="additional-info__link" href="#">Developed by wow studio </a>
+          <a href="#">Developed by wow studio </a>
         </li>
       </ul>
     </div>
@@ -380,27 +388,27 @@
   <div class="popup">
     <h2 class="popup__title">Закажите звонок</h2>
     <p class="popup__text">Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
-    <button type="button" class="popup__button">
-      <svg class="page-footer__svg-open open-list__svg-open" width="16px" height="16px">
+    <button class="popup__button" type="button">
+      <svg width="16" height="16">
         <use xlink:href="./img/sprite.svg#close-icon"></use>
       </svg>
     </button>
     <div class="popup__wrapper">
-      <form method="POST" action="https://echo.htmlacademy.ru">
+      <form id="form-popup" method="POST" action="https://echo.htmlacademy.ru">
         <label>
-          <input type="text" name="name" required="" placeholder="Имя">
+          <input type="text" name="name" id="input-name-popup" autocomplete="off" required="" placeholder="Имя">
         </label>
         <label>
-          <input type="tel" name="phone" pattern="+[0-9]{11}" required="" placeholder="Телефон">
+          <input type="tel" name="phone" id="input-phone-popup" pattern="[+]7[\(]\d{10}[\)]" value="" autocomplete="off" required="" placeholder="Телефон" minlength="14" maxlength="14" title="Используйте формат: +7(7777777777)">
         </label>
         <label>
-          <textarea name="question" required="">Ваш вопрос</textarea>
+          <textarea name="question" id="input-message-popup" required="">Ваш вопрос</textarea>
         </label>
         <button type="submit">Отправить</button>
         <label>
           <input class="visually-hidden" type="checkbox" name="consent" required="">
           <span>
-            <svg width="18px" height="10px">
+            <svg width="18" height="10">
               <use xlink:href="./img/sprite.svg#check-mark-icon"></use>
             </svg>
           </span>

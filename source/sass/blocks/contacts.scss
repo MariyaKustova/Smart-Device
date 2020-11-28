@@ -12,28 +12,29 @@
 .contacts__list {
   @include list-reset();
   display: flex;
+  flex-wrap: wrap;
   margin-left: 23px;
 }
 
 .contacts__item {
   margin-right: 15px;
-}
 
-.contacts__link svg{
-  color: $light-grey;
-}
-
-.contacts__link  {
-  &:hover svg {
-    color: $blue;
+  a svg {
+    color: $light-grey;
   }
 
-  &:focus svg {
-    outline: 1px solid $blue;
-  }
+  a {
+    &:hover svg {
+      color: $blue;
+    }
 
-  &:active svg {
-    color: $blue-active;
+    &:focus {
+      outline: 1px solid $blue;
+    }
+
+    &:active svg {
+      color: $blue-active;
+    }
   }
 }
 
@@ -48,8 +49,10 @@
 
   .contacts__text {
     display: block;
+    min-width: 232.5px;
     color: $dark-grey;
-    font-family: 'PT Mono';
+    font-family: "PT-Mono", "Arial", sans-serif;
+
     @include font(13px, 24px);
     font-weight: 400;
     text-transform: uppercase;
@@ -86,12 +89,14 @@
   .contacts__text {
     display: block;
     color: $dark-grey;
-    font-family: 'PT Mono';
+    font-family: "PT-Mono", "Arial", sans-serif;
+
     @include font(13px, 24px);
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-top: 0;margin-bottom: 32px;
+    margin-top: 0;
+    margin-bottom: 32px;
     margin-right: 25px;
     margin-left: 25px;
   }

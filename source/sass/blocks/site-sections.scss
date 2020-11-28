@@ -9,22 +9,25 @@
   padding-right: 20px;
 }
 
-.site-sections__link {
-  @include link-reset($dark-grey);
-  font-family: 'PT Mono';
-  @include font(15px, 25px);
-  font-weight: 400;
+.site-sections__item {
+  a {
+    @include link-reset($dark-grey);
+    font-family: "PT-Mono", "Arial", sans-serif;
 
-  &:hover {
-    color: $blue;
-  }
+    @include font(15px, 25px);
+    font-weight: 400;
 
-  &:focus {
-    outline: 1px solid $blue;
-  }
+    &:hover {
+      color: $blue;
+    }
 
-  &:active {
-    color: $blue-active;
+    &:focus {
+      outline: 1px solid $blue;
+    }
+
+    &:active {
+      color: $blue-active;
+    }
   }
 }
 

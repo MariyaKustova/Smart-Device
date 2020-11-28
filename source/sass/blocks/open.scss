@@ -1,0 +1,15 @@
+.open {
+  display: block;
+
+  .open__list {
+    display: block;
+  }
+
+  .open__svg-open {
+    display: none;
+  }
+
+  .open__svg-close {
+    display: block;
+  }
+}

@@ -2,7 +2,7 @@
   max-width: 1461px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-right: 27px;
+  padding-right: 2px;
   padding-left: 23px;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -17,51 +17,54 @@
 }
 
 .additional-info__list {
-  width: 42.5%;
+  width: 41.5%;
   min-width: 530px;
 }
 
 .additional-info__list-link {
+  justify-content: space-between;
   flex-grow: 1;
 }
 
 .additional-info__item {
   margin-right: 74px;
-}
 
-.additional-info__item-link:last-child {
-  margin-left: auto;
-}
+  p {
+    color: $dark-grey;
+    font-family: "PT-Mono", "Arial", sans-serif;
 
-.additional-info__text {
-  color: $dark-grey;
-  font-family: 'PT Mono';
-  @include font(13px, 24px);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.additional-info__link {
-  @include link-reset($dark-grey);
-  font-family: 'PT Mono';
-  @include font(13px, 24px);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  &:hover {
-    color: $blue;
+    @include font(13px, 24px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
+}
 
-  &:focus {
-    outline: 1px solid $blue;
-  }
+.additional-info__item-link {
+  margin-right: 25px;
 
-  &:active {
-    color: $blue-active;
+  a {
+    @include link-reset($dark-grey);
+    font-family: "PT-Mono", "Arial", sans-serif;
+
+    @include font(13px, 24px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:focus {
+      outline: 1px solid $blue;
+    }
+
+    &:active {
+      color: $blue-active;
+    }
   }
 }
 
@@ -89,15 +92,12 @@
 
   .additional-info__list-link {
     width: 100%;
-  }
 
-  .additional-info__item-link:last-child {
-    margin-left: 0;
-  }
-
-  .additional-info__item-link {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 21px;
+    a {
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 21px;
+    }
   }
 }
