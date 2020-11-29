@@ -13,7 +13,7 @@
     display: block;
 
     @include size(216px, 318px);
-    background-image: url("../../img/2005@1x.png");
+    background-image: url("../img/2005@1x.png");
     background-repeat: no-repeat;
     background-size: 216px 318px;
     position: absolute;
@@ -22,7 +22,7 @@
     left: -3px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/2005@2x.png");
+      background-image: url("../img/2005@2x.png");
     }
   }
 }

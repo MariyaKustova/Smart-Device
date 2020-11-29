@@ -18,23 +18,23 @@
 
 .contacts__item {
   margin-right: 15px;
+}
 
-  a svg {
-    color: $light-grey;
+.contacts__link svg {
+  color: $light-grey;
+}
+
+.contacts__link {
+  &:hover svg {
+    color: $blue;
   }
 
-  a {
-    &:hover svg {
-      color: $blue;
-    }
+  &:focus {
+    outline: 1px solid $blue;
+  }
 
-    &:focus {
-      outline: 1px solid $blue;
-    }
-
-    &:active svg {
-      color: $blue-active;
-    }
+  &:active svg {
+    color: $blue-active;
   }
 }
 

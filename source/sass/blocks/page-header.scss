@@ -1,5 +1,5 @@
 .page-header {
-  background-image: url("../../img/background-desktop@1x.png");
+  background-image: url("../img/background-desktop@1x.png");
   background-color: $dark-grey;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   padding-bottom: 25px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/background-desktop@2x.png");
+    background-image: url("../img/background-desktop@2x.png");
   }
 }
 
@@ -60,13 +60,13 @@
     @include size(705px, 515px);
     position: absolute;
     right: 9.1%;
-    background-image: url("../../img/electronic-board@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+    background-image: url("../img/electronic-board@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
     background-repeat: no-repeat;
     background-size: 707px 515px, 553px 475px, 328px 278px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
     background-position: -1px 0, 67px 19px, 13px 218px, 172px 490px, 63px 14px, 339px 490px, 612px 14px, 11px 215px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/electronic-board@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-image: url("../img/electronic-board@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
       background-repeat: no-repeat;
       background-size: 707px 515px, 553px 475px, 328px 278px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
       background-position: -1px 0, 67px 19px, 13px 218px, 172px 490px, 63px 14px, 339px 490px, 612px 14px, 11px 215px;
@@ -179,11 +179,11 @@
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .page-header {
-    background-image: url("../../img/background-tablet@1x.png");
+    background-image: url("../img/background-tablet@1x.png");
     min-height: 661px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-tablet@2x.png");
+      background-image: url("../img/background-tablet@2x.png");
     }
   }
 
@@ -207,13 +207,13 @@
       position: absolute;
       top: 0;
       right: 0;
-      background-image: url("../../img/electronic-board-tablet@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-image: url("../img/electronic-board-tablet@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
       background-repeat: no-repeat;
       background-size: 258px 339px, 436px 378px, 252px 217px, 8px 8px, 8px 8px, 8px 8px, 8px 8px;
       background-position: 57px 41px, 47px 15px, 8px 171px, 261px 385px, 44px 10px, 131px 385px, 4px 167px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/electronic-board-tablet@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+        background-image: url("../img/electronic-board-tablet@2x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
         background-repeat: no-repeat;
         background-size: 258px 339px, 436px 378px, 252px 217px, 8px 8px, 8px 8px, 8px 8px, 8px 8px;
         background-position: 57px 41px, 47px 15px, 8px 171px, 261px 385px, 44px 10px, 131px 385px, 4px 167px;
@@ -255,11 +255,11 @@
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .page-header {
-    background-image: url("../../img/background-mobile@1x.png");
+    background-image: url("../img/background-mobile@1x.png");
     min-height: 622px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-mobile@2x.png");
+      background-image: url("../img/background-mobile@2x.png");
     }
   }
 
@@ -292,13 +292,13 @@
       position: absolute;
       top: 0;
       right: 0;
-      background-image: url("../../img/electronic-board-mobile@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+      background-image: url("../img/electronic-board-mobile@1x.png"), url("../../img/polygon.svg"), url("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
       background-repeat: no-repeat;
       background-size: 292px 220px, 217px 185px, 234px 213px, 7px 7px, 7px 7px;
       background-position: 22px 31px, 204px 13px, 170px 162px, 284px 368px, 201px 9px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/electronic-board-mobile@2x.png"), url("../../img/polygon.svg"), rl("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
+        background-image: url("../img/electronic-board-mobile@2x.png"), url("../../img/polygon.svg"), rl("../../img/polygon-mini.svg"), url("../../img/ellipse.svg"), url("../../img/ellipse.svg");
         background-repeat: no-repeat;
         background-size: 292px 220px, 217px 185px, 234px 213px, 7px 7px, 7px 7px;
         background-position: 22px 31px, 204px 13px, 170px 162px, 284px 368px, 201px 9px;

@@ -36,33 +36,38 @@ var render = function (container, template, place) {
   container.insertAdjacentHTML(place, template);
 };
 
-buttonMenu.addEventListener('click', function () {
-  popup.classList.add('open');
-  render(body, createOverlay(), 'beforeend');
-  inputNamePopup.focus();
-  inputNamePopup.value = '';
-  inputPhonePopup.value = '';
-  inputMessagePopup.value = '';
+if (popup) {
+  buttonMenu.addEventListener('click', function () {
 
-  body.querySelector('.overlay').addEventListener('click', function () {
+    popup.classList.add('open');
+    render(body, createOverlay(), 'beforeend');
+    inputNamePopup.focus();
+    inputNamePopup.value = '';
+    inputPhonePopup.value = '';
+    inputMessagePopup.value = '';
+
+    body.querySelector('.overlay').addEventListener('click', function () {
+      popup.classList.remove('open');
+      body.querySelector('.overlay').remove();
+    });
+  });
+
+  buttonCloseMenu.addEventListener('click', function () {
     popup.classList.remove('open');
     body.querySelector('.overlay').remove();
   });
-});
 
-buttonCloseMenu.addEventListener('click', function () {
-  popup.classList.remove('open');
-  body.querySelector('.overlay').remove();
-});
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      popup.classList.remove('open');
+      body.querySelector('.overlay').remove();
+    }
+  });
 
+  addListenerButton(inputPhonePopup);
 
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    popup.classList.remove('open');
-    body.querySelector('.overlay').remove();
-  }
-});
-
+  addListenerForm(formPopup);
+}
 
 function addListenerButton(element) {
   element.onchange = function () {
@@ -77,8 +82,6 @@ function addListenerButton(element) {
     element.value = '+7(';
   };
 }
-
-addListenerButton(inputPhonePopup);
 
 addListenerButton(inputPhoneForm);
 
@@ -96,8 +99,6 @@ function addListenerForm(element) {
     }
   });
 }
-
-addListenerForm(formPopup);
 
 addListenerForm(form);
 

@@ -1,5 +1,6 @@
 .page-footer {
   background-color: $background-footer;
+  color: $dark-grey;
 }
 
 .page-footer__wrapper-content {
@@ -45,7 +46,6 @@
 .page-footer__title {
   @include font(15px, 16px);
   font-weight: 400;
-  color: $dark-grey;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 25px;

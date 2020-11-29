@@ -14,7 +14,7 @@
     top: 162px;
     left: 50%;
     transform: translate(-50.5%);
-    background-image: url("../../img/polygon-right.svg"), url("../../img/ellipse-grey.svg");
+    background-image: url("../img/polygon-right.svg"), url("../../img/ellipse-grey.svg");
     background-repeat: no-repeat;
     background-size: 717px 695px, 10px 10px;
     background-position: 0 0, 236px 688px;
@@ -28,7 +28,7 @@
     position: absolute;
     top: 457px;
     left: -180px;
-    background-image: url("../../img/polygon-left.svg"), url("../../img/ellipse-grey.svg"), url("../../img/ellipse-grey.svg");
+    background-image: url("../img/polygon-left.svg"), url("../../img/ellipse-grey.svg"), url("../../img/ellipse-grey.svg");
     background-repeat: no-repeat;
     background-size: 717px 695px, 10px 10px, 10px 10px;
     background-position: 0 5px, 471px 144px, 471px 690px;
@@ -47,7 +47,7 @@
     @include size(100%, 1263px);
     position: absolute;
     top: 0;
-    background-image: url("../../img/polygon-right.svg"), url("../../img/polygon-left.svg");
+    background-image: url("../img/polygon-right.svg"), url("../../img/polygon-left.svg");
     background-repeat: no-repeat;
     background-size: 330px 330px, 330px 330px;
     background-position: 98% 30%, 12.9% -2.5%;
@@ -102,6 +102,7 @@
 
   h3 {
     @include font(24px, 34px);
+    color: $blue;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 0;
@@ -131,7 +132,7 @@
       left: auto;
       transform: translate(0);
       right: 0;
-      background-image: url("../../img/polygon-tablet.svg"), url("../../img/ellipse-grey.svg");
+      background-image: url("../img/polygon-tablet.svg"), url("../../img/ellipse-grey.svg");
       background-repeat: no-repeat;
       background-size: 519px 688px, 10px 10px;
       background-position: -198px 30px, 38px 573px;
@@ -183,7 +184,7 @@
       left: auto;
       transform: translate(0);
       right: 0;
-      background-image: url("../../img/polygon-tablet.svg"), url("../../img/ellipse-grey.svg");
+      background-image: url("../img/polygon-tablet.svg"), url("../../img/ellipse-grey.svg");
       background-repeat: no-repeat;
       background-size: 519px 688px, 10px 10px;
       background-position: -198px 30px, 38px 573px;

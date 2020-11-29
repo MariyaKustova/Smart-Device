@@ -34,7 +34,6 @@
 .products__item {
   @include size(370px, 620px);
   margin-bottom: 30px;
-  background-color: $grey;
 
   a {
     @include link-reset($white);
