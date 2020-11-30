@@ -1,12 +1,7 @@
 'use strict';
 
 var body = document.querySelector('body');
-var buttonMenu = body.querySelector('.main-menu__button');
-var buttonCloseMenu = body.querySelector('.popup__button');
 var popup = body.querySelector('.popup');
-var inputNamePopup = body.querySelector('#input-name-popup');
-var inputPhonePopup = body.querySelector('#input-phone-popup');
-var inputMessagePopup = body.querySelector('#input-message-popup');
 var inputPhoneForm = body.querySelector('#input-phone-form');
 
 var isStorageSupport = supportLocalStorage();
@@ -35,39 +30,6 @@ var createOverlay = function () {
 var render = function (container, template, place) {
   container.insertAdjacentHTML(place, template);
 };
-
-if (popup) {
-  buttonMenu.addEventListener('click', function () {
-
-    popup.classList.add('open');
-    render(body, createOverlay(), 'beforeend');
-    inputNamePopup.focus();
-    inputNamePopup.value = '';
-    inputPhonePopup.value = '';
-    inputMessagePopup.value = '';
-
-    body.querySelector('.overlay').addEventListener('click', function () {
-      popup.classList.remove('open');
-      body.querySelector('.overlay').remove();
-    });
-  });
-
-  buttonCloseMenu.addEventListener('click', function () {
-    popup.classList.remove('open');
-    body.querySelector('.overlay').remove();
-  });
-
-  window.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 27) {
-      popup.classList.remove('open');
-      body.querySelector('.overlay').remove();
-    }
-  });
-
-  addListenerButton(inputPhonePopup);
-
-  addListenerForm(formPopup);
-}
 
 function addListenerButton(element) {
   element.onchange = function () {
@@ -101,6 +63,46 @@ function addListenerForm(element) {
 }
 
 addListenerForm(form);
+
+if (popup) {
+  var buttonMenu = body.querySelector('.main-menu__link');
+  var buttonCloseMenu = body.querySelector('.popup__button');
+  var inputNamePopup = body.querySelector('#input-name-popup');
+  var inputPhonePopup = body.querySelector('#input-phone-popup');
+  var inputMessagePopup = body.querySelector('#input-message-popup');
+
+  buttonMenu.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    popup.classList.add('open');
+    render(body, createOverlay(), 'beforeend');
+    inputNamePopup.focus();
+    inputNamePopup.value = '';
+    inputPhonePopup.value = '';
+    inputMessagePopup.value = '';
+
+    body.querySelector('.overlay').addEventListener('click', function () {
+      popup.classList.remove('open');
+      body.querySelector('.overlay').remove();
+    });
+  });
+
+  buttonCloseMenu.addEventListener('click', function () {
+    popup.classList.remove('open');
+    body.querySelector('.overlay').remove();
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      popup.classList.remove('open');
+      body.querySelector('.overlay').remove();
+    }
+  });
+
+  addListenerButton(inputPhonePopup);
+
+  addListenerForm(formPopup);
+}
 
 var buttonsFooter = body.querySelectorAll('.page-footer__button');
 

@@ -11,7 +11,7 @@
 
 .site-sections__item {
   a {
-    @include link-reset($dark-grey);
+    @include link-reset($dark-grey-opacity);
     font-family: "PT-Mono", "Arial", sans-serif;
 
     @include font(15px, 25px);

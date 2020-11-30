@@ -30,7 +30,7 @@
   margin-right: 74px;
 
   p {
-    color: $dark-grey;
+    color: $dark-grey-opacity;
     font-family: "PT-Mono", "Arial", sans-serif;
 
     @include font(13px, 24px);
@@ -46,7 +46,7 @@
   margin-right: 25px;
 
   a {
-    @include link-reset($dark-grey);
+    @include link-reset($dark-grey-opacity);
     font-family: "PT-Mono", "Arial", sans-serif;
 
     @include font(13px, 24px);

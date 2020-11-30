@@ -10,7 +10,7 @@
 
 .address__item {
   p {
-    color: $dark-grey;
+    color: $dark-grey-opacity;
     font-family: "PT-Mono", "Arial", sans-serif;
 
     @include font(15px, 25px);
@@ -19,7 +19,7 @@
   }
 
   a {
-    @include link-reset($dark-grey);
+    @include link-reset($dark-grey-opacity);
     font-family: "PT-Mono", "Arial", sans-serif;
 
     @include font(15px, 25px);
