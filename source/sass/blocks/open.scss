@@ -10,6 +10,18 @@
   }
 
   .open__svg-close {
-    display: block;
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .open {
+    .open__svg-close {
+      display: block;
+    }
   }
 }

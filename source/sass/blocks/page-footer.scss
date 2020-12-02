@@ -52,6 +52,26 @@
 }
 
 .page-footer__button {
+  border: none;
+  background-color: transparent;
+  padding-top: 14px;
+  padding-left: 0;
+  padding-bottom: 24px;
+
+  span {
+  @include font(15px, 16px);
+  color: $dark-grey;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+}
+
+.page-footer__svg-close {
+  display: none;
+}
+
+.page-footer__svg-open {
   display: none;
 }
 
@@ -108,12 +128,14 @@
   }
 
   .page-footer__button {
-    display: block;
-
-    @include size(22px, 22px);
-    margin-left: auto;
-    border: none;
-    background-color: transparent;
+    width: 100%;
+    padding-top: 28px;
+    padding-left: 15px;
+    padding-bottom: 26px;
+    padding-right: 15px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
 
     &:hover svg {
       color: $blue;
@@ -128,16 +150,18 @@
     }
   }
 
-  .page-footer__button svg {
+  .page-footer__svg-open {
+    display: block;
     color: $background-img;
-    position: relative;
-    top: 1px;
-    right: 3px;
+    position: absolute;
+    top: 29px;
+    right: 17px;
   }
 
   .page-footer__svg-close {
-    position: relative;
-    top: -7px;
+    position: absolute;
+    top: 36px;
+    right: 17px;
     display: none;
   }
 }

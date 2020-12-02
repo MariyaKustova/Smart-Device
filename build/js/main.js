@@ -21,8 +21,6 @@ body.classList.remove('no-js');
 
 body.querySelector('.address').classList.remove('open');
 
-body.querySelector('.site-sections').classList.remove('open');
-
 var createOverlay = function () {
   return '<div class="overlay" id="js-overlay"></div>';
 };
@@ -32,19 +30,34 @@ var render = function (container, template, place) {
 };
 
 function addListenerButton(element) {
-  element.onchange = function () {
-    element.value = element.value + ')';
+  element.oninput = function () {
+    if (element.value.length === 6) {
+      element.value = element.value + ')';
+    }
+  };
+
+  element.onkeydown = function (evt) {
+    if (evt.keyCode === 46
+      || evt.keyCode === 27
+      || evt.keyCode === 13
+      || evt.keyCode === 9
+      || evt.keyCode === 8) {
+      return;
+    } else {
+      if ((evt.keyCode < 48 || evt.keyCode > 57) && (evt.keyCode < 96 || evt.keyCode > 105)) {
+        evt.preventDefault();
+      }
+    }
   };
 
   element.onkeyup = function () {
-    element.value = element.value.replace('[+]7[\(]\d{10}[\)]');
+    element.value = element.value.replace('/[+]7\ \([\d]{2,3}\)\ [\d]{7}$/');
   };
 
   element.onfocus = function () {
     element.value = '+7(';
   };
 }
-
 addListenerButton(inputPhoneForm);
 
 
@@ -76,6 +89,7 @@ if (popup) {
 
     popup.classList.add('open');
     render(body, createOverlay(), 'beforeend');
+    body.classList.add('no-scroll');
     inputNamePopup.focus();
     inputNamePopup.value = '';
     inputPhonePopup.value = '';
@@ -84,18 +98,21 @@ if (popup) {
     body.querySelector('.overlay').addEventListener('click', function () {
       popup.classList.remove('open');
       body.querySelector('.overlay').remove();
+      body.classList.remove('no-scroll');
     });
   });
 
   buttonCloseMenu.addEventListener('click', function () {
     popup.classList.remove('open');
     body.querySelector('.overlay').remove();
+    body.classList.remove('no-scroll');
   });
 
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       popup.classList.remove('open');
       body.querySelector('.overlay').remove();
+      body.classList.remove('no-scroll');
     }
   });
 
@@ -104,13 +121,20 @@ if (popup) {
   addListenerForm(formPopup);
 }
 
-var buttonsFooter = body.querySelectorAll('.page-footer__button');
+var buttonOpenSiteSection = body.querySelector('#button-footer-1');
 
-buttonsFooter.forEach(function (item) {
-  item.addEventListener('click', function () {
-    item.parentNode.parentNode.classList.toggle('open');
+var buttonOpenAddress = body.querySelector('#button-footer-2');
+
+function addListenerButtonFooter(activeElement, passiveElement) {
+  activeElement.addEventListener('click', function () {
+    activeElement.parentElement.classList.toggle('open');
+    passiveElement.parentElement.classList.toggle('open');
   });
-});
+}
+
+addListenerButtonFooter(buttonOpenSiteSection, buttonOpenAddress);
+
+addListenerButtonFooter(buttonOpenAddress, buttonOpenSiteSection);
 
 // Picture element HTML5 shiv
 document.createElement('picture');

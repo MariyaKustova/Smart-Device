@@ -34,6 +34,7 @@
   position: absolute;
   top: 17px;
   right: 14px;
+  cursor: pointer;
 
   &:hover {
     outline: 1px solid $white;
@@ -70,8 +71,10 @@
   textarea {
     width: 100%;
     border: none;
+    border-radius: 0;
     background-color: $blue-input;
     font-family: "PT-Mono", "Arial", sans-serif;
+    box-shadow: none;
 
     @include font(16px, 22px);
     font-weight: 400;
@@ -79,6 +82,7 @@
     box-sizing: border-box;
     padding: 11px 25px 18px;
     margin-bottom: 31px;
+    box-shadow: none;
 
     &::placeholder {
       color: $white;
@@ -91,20 +95,32 @@
     &:focus {
       outline: 1px solid $white;
     }
+
+    :invalid {
+      outline: 2px solid $white;;
+    }
   }
 
   textarea {
     min-height: 103px;
     margin-bottom: 30px;
+    resize: none;
   }
+}
+
+.popup__wrapper-control {
+  display: flex;
+  flex-direction: column;
 
   button {
+    order: 1;
     background-color: $blue;
     border: 1px solid $white;
     border-radius: 5px;
     padding: 14px 15px 15px;
     margin-bottom: 34px;
     color: $white;
+    cursor: pointer;
 
     @include font(14px, 16px);
     text-transform: uppercase;
@@ -123,6 +139,10 @@
     &:focus {
       outline: 1px solid $white;
     }
+  }
+
+  label {
+    order: 2;
   }
 
   input[type="checkbox"] {

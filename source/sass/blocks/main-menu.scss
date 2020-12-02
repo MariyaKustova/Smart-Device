@@ -9,6 +9,7 @@
 
 .main-menu__list {
   @include list-reset();
+  max-width: 865px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
