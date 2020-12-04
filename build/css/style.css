@@ -1347,6 +1347,8 @@ img {
   z-index: 1; }
   .form__wrapper-content form {
     padding-left: 3px; }
+  .form__wrapper-content label {
+    font-size: 0; }
   .form__wrapper-content input,
   .form__wrapper-content textarea {
     width: 100%;
@@ -2104,6 +2106,8 @@ img {
   border-radius: 0;
   background-color: #19baff;
   font-family: "PT-Mono", "Arial", sans-serif;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -2111,7 +2115,8 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 11px 25px 18px;
-  margin-bottom: 31px; }
+  margin-bottom: 31px;
+  box-shadow: none; }
   .popup__wrapper input::-webkit-input-placeholder,
   .popup__wrapper textarea::-webkit-input-placeholder {
     color: #ffffff; }

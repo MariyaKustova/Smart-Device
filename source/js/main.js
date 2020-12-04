@@ -128,7 +128,9 @@ var buttonOpenAddress = body.querySelector('#button-footer-2');
 function addListenerButtonFooter(activeElement, passiveElement) {
   activeElement.addEventListener('click', function () {
     activeElement.parentElement.classList.toggle('open');
-    passiveElement.parentElement.classList.toggle('open');
+    if (passiveElement.parentElement.classList.contains('open')) {
+      passiveElement.parentElement.classList.remove('open');
+    }
   });
 }
 
